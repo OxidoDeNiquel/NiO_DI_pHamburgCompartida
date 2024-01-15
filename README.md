@@ -29,6 +29,3 @@ Bienvenido a **BurgerApp**, una aplicación de escritorio desarrollada en Window
 - Windows 7 o superior.
 - .NET Framework 4.5 o superior.
 
-## Uso
-
-Proporciona instrucciones detalladas sobre cómo usar tu aplicación. Esto podría incluir cómo agregar nuevos elementos al menú, cómo registrar un pedido, etc.

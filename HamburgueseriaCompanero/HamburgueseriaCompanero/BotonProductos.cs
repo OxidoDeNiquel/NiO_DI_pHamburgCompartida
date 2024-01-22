@@ -16,5 +16,18 @@ namespace HamburgueseriaCompanero
         {
             InitializeComponent();
         }
+
+        public String NuevoTitulo
+        {
+            get { return button_elem.Text; }
+            set { button_elem.Text = NuevoTitulo; }
+        }
+
+        public PictureBox NuevaImagen
+        {
+            get { return pictureBox_image; }
+            set { pictureBox_image = NuevaImagen; }
+        }
+
     }
 }

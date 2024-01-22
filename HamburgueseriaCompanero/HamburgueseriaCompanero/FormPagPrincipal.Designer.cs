@@ -48,6 +48,7 @@
             // 
             // botonCesta
             // 
+            botonCesta.BackColor = Color.Transparent;
             botonCesta.Cursor = Cursors.Hand;
             botonCesta.Image = Properties.Resources.cesta;
             botonCesta.Location = new Point(751, 12);
@@ -61,8 +62,9 @@
             // label_TituloApp
             // 
             label_TituloApp.AutoSize = true;
+            label_TituloApp.BackColor = Color.Transparent;
             label_TituloApp.Font = new Font("Showcard Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label_TituloApp.Location = new Point(192, 9);
+            label_TituloApp.Location = new Point(176, 37);
             label_TituloApp.Name = "label_TituloApp";
             label_TituloApp.Size = new Size(464, 40);
             label_TituloApp.TabIndex = 1;
@@ -71,6 +73,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI Black", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(236, 97);
             label1.Name = "label1";
@@ -81,9 +84,9 @@
             // button_burguer
             // 
             button_burguer.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button_burguer.Location = new Point(104, 327);
+            button_burguer.Location = new Point(41, 318);
             button_burguer.Name = "button_burguer";
-            button_burguer.Size = new Size(102, 35);
+            button_burguer.Size = new Size(226, 56);
             button_burguer.TabIndex = 3;
             button_burguer.Text = "Hamburguesa";
             button_burguer.UseVisualStyleBackColor = true;
@@ -101,6 +104,7 @@
             // 
             // button_info
             // 
+            button_info.BackColor = Color.Transparent;
             button_info.Image = Properties.Resources.info;
             button_info.Location = new Point(573, 105);
             button_info.Name = "button_info";
@@ -122,9 +126,9 @@
             // button_bebida
             // 
             button_bebida.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button_bebida.Location = new Point(348, 327);
+            button_bebida.Location = new Point(286, 318);
             button_bebida.Name = "button_bebida";
-            button_bebida.Size = new Size(102, 35);
+            button_bebida.Size = new Size(226, 56);
             button_bebida.TabIndex = 6;
             button_bebida.Text = "Bebida";
             button_bebida.UseVisualStyleBackColor = true;
@@ -132,20 +136,21 @@
             // 
             // pictureBox_patatas
             // 
+            pictureBox_patatas.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox_patatas.Image = (Image)resources.GetObject("pictureBox_patatas.Image");
             pictureBox_patatas.Location = new Point(532, 159);
             pictureBox_patatas.Name = "pictureBox_patatas";
             pictureBox_patatas.Size = new Size(226, 162);
-            pictureBox_patatas.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox_patatas.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox_patatas.TabIndex = 9;
             pictureBox_patatas.TabStop = false;
             // 
             // button_patatas
             // 
             button_patatas.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button_patatas.Location = new Point(595, 327);
+            button_patatas.Location = new Point(531, 318);
             button_patatas.Name = "button_patatas";
-            button_patatas.Size = new Size(102, 35);
+            button_patatas.Size = new Size(227, 56);
             button_patatas.TabIndex = 8;
             button_patatas.Text = "Patatas";
             button_patatas.UseVisualStyleBackColor = true;

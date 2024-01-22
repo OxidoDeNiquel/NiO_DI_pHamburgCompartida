@@ -21,7 +21,10 @@ namespace HamburgueseriaCompanero
 
         private void botonCesta_Click(object sender, EventArgs e)
         {
+            FormTicket FormTicket = new FormTicket();
+            FormTicket.Show();
 
+            this.Visible = false;
         }
 
         /*private void button_bebida_Click(object sender, EventArgs e)

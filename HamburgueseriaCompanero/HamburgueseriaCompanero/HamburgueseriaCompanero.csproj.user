@@ -19,5 +19,8 @@
     <Compile Update="FormPatatas.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

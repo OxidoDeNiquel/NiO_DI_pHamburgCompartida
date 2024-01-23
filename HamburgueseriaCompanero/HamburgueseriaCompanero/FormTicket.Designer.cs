@@ -33,11 +33,13 @@
             label1 = new Label();
             label_TituloApp = new Label();
             pictureBox_atras = new PictureBox();
-            dataGridView1 = new DataGridView();
+            dataGridViewTicket = new DataGridView();
             button_pagar = new Button();
+            column_name = new DataGridViewTextBoxColumn();
+            column_price = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)button_info).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_atras).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewTicket).BeginInit();
             SuspendLayout();
             // 
             // button_info
@@ -85,14 +87,16 @@
             pictureBox_atras.TabIndex = 19;
             pictureBox_atras.TabStop = false;
             // 
-            // dataGridView1
+            // dataGridViewTicket
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(114, 161);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(581, 348);
-            dataGridView1.TabIndex = 20;
+            dataGridViewTicket.BackgroundColor = Color.White;
+            dataGridViewTicket.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewTicket.Columns.AddRange(new DataGridViewColumn[] { column_name, column_price });
+            dataGridViewTicket.Location = new Point(114, 161);
+            dataGridViewTicket.Name = "dataGridViewTicket";
+            dataGridViewTicket.RowTemplate.Height = 25;
+            dataGridViewTicket.Size = new Size(581, 348);
+            dataGridViewTicket.TabIndex = 20;
             // 
             // button_pagar
             // 
@@ -103,22 +107,34 @@
             button_pagar.Text = "PAGAR";
             button_pagar.UseVisualStyleBackColor = true;
             // 
+            // column_name
+            // 
+            column_name.HeaderText = "Nombre";
+            column_name.Name = "column_name";
+            column_name.Width = 76;
+            // 
+            // column_price
+            // 
+            column_price.HeaderText = "Precio";
+            column_price.Name = "column_price";
+            // 
             // FormTicket
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 584);
             Controls.Add(button_pagar);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridViewTicket);
             Controls.Add(pictureBox_atras);
             Controls.Add(button_info);
             Controls.Add(label1);
             Controls.Add(label_TituloApp);
             Name = "FormTicket";
             Text = "FormTicket";
+            Load += FormTicket_Load;
             ((System.ComponentModel.ISupportInitialize)button_info).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_atras).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewTicket).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -129,7 +145,9 @@
         private Label label1;
         private Label label_TituloApp;
         private PictureBox pictureBox_atras;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewTicket;
         private Button button_pagar;
+        private DataGridViewTextBoxColumn column_name;
+        private DataGridViewTextBoxColumn column_price;
     }
 }

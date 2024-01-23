@@ -24,3 +24,4 @@ D:\Interfaces\Proyectos\HamburgueseriaCompanero\HamburgueseriaCompanero\obj\Debu
 D:\Interfaces\Proyectos\HamburgueseriaCompanero\HamburgueseriaCompanero\obj\Debug\net6.0-windows\HamburgueseriaCompanero.FormBebida.resources
 D:\Interfaces\Proyectos\HamburgueseriaCompanero\HamburgueseriaCompanero\obj\Debug\net6.0-windows\HamburgueseriaCompanero.FormHamburguesa.resources
 D:\Interfaces\Proyectos\HamburgueseriaCompanero\HamburgueseriaCompanero\obj\Debug\net6.0-windows\HamburgueseriaCompanero.FormPatatas.resources
+D:\Interfaces\Proyectos\HamburgueseriaCompanero\HamburgueseriaCompanero\obj\Debug\net6.0-windows\HamburgueseriaCompanero.FormTicket.resources

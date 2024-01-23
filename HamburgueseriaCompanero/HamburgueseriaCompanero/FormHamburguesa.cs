@@ -23,7 +23,8 @@ namespace HamburgueseriaCompanero
             volverAtras();
         }
 
-        private void volverAtras() {
+        private void volverAtras()
+        {
             FormPagPrincipal form2 = new FormPagPrincipal();
             form2.Show();
 
@@ -59,8 +60,8 @@ namespace HamburgueseriaCompanero
         {
             // Mostrar un mensaje de información con botones de aceptar y cancelar
             DialogResult resultado = MessageBox.Show("CANGREBURGUER\n" +
-                "\nIngredientes:\n - Carne de vacuno\n - Lechuga\n - Tomate\n - Queso\n - Cangrejo", 
-                "Ingredientes Cangreburguer", 
+                "\nIngredientes:\n - Carne de vacuno\n - Lechuga\n - Tomate\n - Queso\n - Cangrejo",
+                "Ingredientes Cangreburguer",
                 MessageBoxButtons.OKCancel,
                 MessageBoxIcon.Information);
 
@@ -90,15 +91,15 @@ namespace HamburgueseriaCompanero
 
         }
         private void button_VerIngredientesCME_Click(object sender, EventArgs e)
-                {
-                    DialogResult resultado = MessageBox.Show(
-                        "CANGRE-MELT EXPLOSIVO\n\nIngredientes:\n - Carne de vacuno x 2\n - Lechuga\n - Tomate\n - Queso x 2\n - Cebolla Morada\n - Secreto Explosivo",
-                        "Ingredientes Cangre-Melt Explosivo",
-                        MessageBoxButtons.OKCancel,
-                        MessageBoxIcon.Information
-                    );
+        {
+            DialogResult resultado = MessageBox.Show(
+                "CANGRE-MELT EXPLOSIVO\n\nIngredientes:\n - Carne de vacuno x 2\n - Lechuga\n - Tomate\n - Queso x 2\n - Cebolla Morada\n - Secreto Explosivo",
+                "Ingredientes Cangre-Melt Explosivo",
+                MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Information
+            );
 
-                }
+        }
 
         private void button_burguerDeliciaArenosa_Click(object sender, EventArgs e)
         {

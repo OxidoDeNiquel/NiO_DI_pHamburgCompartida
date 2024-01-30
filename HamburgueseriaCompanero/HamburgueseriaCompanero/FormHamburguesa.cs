@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,8 +14,10 @@ namespace HamburgueseriaCompanero
 {
     public partial class FormHamburguesa : Form
     {
+        GestorInterfaz gestor;
         public FormHamburguesa()
         {
+            gestor = new GestorInterfaz();
             InitializeComponent();
         }
 
@@ -36,7 +39,7 @@ namespace HamburgueseriaCompanero
             // Mostrar un mensaje irresistible con botones de aventura y deleite
             DialogResult resultadoCangreburguer = MessageBox.Show(
                 "¡Prueba la Cangreburguer!\n\n" +
-                "Sumérgete en la deliciosa experiencia de la Cangreburguer.\n\n¿Te animas a añadirla a tu pedido?",
+                "Sumérgete en la deliciosa experiencia de la Cangreburguer.\n\n¿Te animas a añadirla a tu pedido?\n\n PRECIO: 5€",
                 "¡Descubre la Cangreburguer!",
                 MessageBoxButtons.OKCancel,
                 MessageBoxIcon.Question
@@ -47,6 +50,7 @@ namespace HamburgueseriaCompanero
             {
                 case DialogResult.OK:
                     Console.WriteLine("El usuario ha seleccionado 'OK'.");
+                    gestor.createHamburguer("Cangreburguer", 5.0);
                     break;
 
                 case DialogResult.Cancel:
@@ -82,6 +86,7 @@ namespace HamburgueseriaCompanero
             {
                 case DialogResult.OK:
                     Console.WriteLine("El usuario ha seleccionado 'OK'.");
+                    gestor.createHamburguer("Cangre-Melt Exposiva", 5.0);
                     break;
 
                 case DialogResult.Cancel:

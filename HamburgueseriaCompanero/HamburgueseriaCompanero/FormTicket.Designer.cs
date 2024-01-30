@@ -111,7 +111,6 @@
             // 
             column_name.HeaderText = "Nombre";
             column_name.Name = "column_name";
-            column_name.Width = 76;
             // 
             // column_price
             // 

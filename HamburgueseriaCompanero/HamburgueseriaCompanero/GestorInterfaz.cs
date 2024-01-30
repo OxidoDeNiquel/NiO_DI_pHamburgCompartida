@@ -21,10 +21,11 @@ namespace HamburgueseriaCompanero
             datosTicket.Remove(producto);
         }
 
-        public void createHamburguer(string name, int size, double precio)
+        public void createHamburguer(string name, double precio)
         {
-            Hamburguesa hamburguesa = new Hamburguesa(1, size);
+            Hamburguesa hamburguesa = new Hamburguesa(1, 1);
             hamburguesa.setNombre(name);
+            hamburguesa.setPrecio(precio);
             addTicket(hamburguesa);
         }
 
@@ -32,6 +33,7 @@ namespace HamburgueseriaCompanero
         {
             Patatas patatas = new Patatas(2, size);
             patatas.setNombre(name);
+            patatas.setPrecio(precio) ;
             addTicket(patatas);
         }
 
@@ -39,6 +41,7 @@ namespace HamburgueseriaCompanero
         {
             Bebida bebida = new Bebida(3, size, name);
             bebida.setNombre(name);
+            bebida.setPrecio(precio);
             addTicket(bebida);
         }
 

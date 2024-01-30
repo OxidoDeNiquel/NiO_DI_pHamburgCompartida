@@ -39,7 +39,7 @@ namespace HamburgueseriaCompanero
             // Mostrar un mensaje irresistible con botones de aventura y deleite
             DialogResult resultadoCangreburguer = MessageBox.Show(
                 "¡Prueba la Cangreburguer!\n\n" +
-                "Sumérgete en la deliciosa experiencia de la Cangreburguer.\n\n¿Te animas a añadirla a tu pedido?\n\n PRECIO: 5€",
+                "Sumérgete en la deliciosa experiencia de la Cangreburguer.\n\n¿Te animas a añadirla a tu pedido?\n\nPRECIO: 5€",
                 "¡Descubre la Cangreburguer!",
                 MessageBoxButtons.OKCancel,
                 MessageBoxIcon.Question
@@ -75,7 +75,7 @@ namespace HamburgueseriaCompanero
         {
             DialogResult resultadoCangreMelt = MessageBox.Show(
                 "¡Descubre la CANGRE-MELT EXPLOSIVA!\n\n" +
-                "Sumérgete en la explosión de sabores de esta deliciosa hamburguesa.\n\n¿Te animas a añadirla a tu pedido?",
+                "Sumérgete en la explosión de sabores de esta deliciosa hamburguesa.\n\n¿Te animas a añadirla a tu pedido?\n\nPRECIO: 5€",
                 "¡Siente la Explosión!",
                 MessageBoxButtons.OKCancel,
                 MessageBoxIcon.Question
@@ -110,7 +110,7 @@ namespace HamburgueseriaCompanero
         {
             DialogResult resultadoDeliciaArenosa = MessageBox.Show(
                 "¡Prueba la DELICIA ARENOSA!\n\n" +
-                "Disfruta de una hamburguesa única con sabores sorprendentes.\n\n¿Te animas a añadirla a tu pedido?",
+                "Disfruta de una hamburguesa única con sabores sorprendentes.\n\n¿Te animas a añadirla a tu pedido?\n\nPRECIO: 5€",
                 "¡Explora la Delicia!",
                 MessageBoxButtons.OKCancel,
                 MessageBoxIcon.Question
@@ -121,6 +121,7 @@ namespace HamburgueseriaCompanero
             {
                 case DialogResult.OK:
                     Console.WriteLine("El usuario ha seleccionado 'OK'.");
+                    gestor.createHamburguer("Cangre-Melt Exposiva", 5.0);
                     break;
 
                 case DialogResult.Cancel:

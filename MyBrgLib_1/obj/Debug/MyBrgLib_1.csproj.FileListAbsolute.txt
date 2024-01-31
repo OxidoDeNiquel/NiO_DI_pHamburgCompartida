@@ -1,0 +1,6 @@
+E:\curso 2\desarrollo de interfaces\Hamburgueseria\Hamburgueseria\MyBrgLib_1\bin\Debug\MyBrgLib_1.dll
+E:\curso 2\desarrollo de interfaces\Hamburgueseria\Hamburgueseria\MyBrgLib_1\bin\Debug\MyBrgLib_1.pdb
+E:\curso 2\desarrollo de interfaces\Hamburgueseria\Hamburgueseria\MyBrgLib_1\obj\Debug\MyBrgLib_1.csproj.AssemblyReference.cache
+E:\curso 2\desarrollo de interfaces\Hamburgueseria\Hamburgueseria\MyBrgLib_1\obj\Debug\MyBrgLib_1.csproj.CoreCompileInputs.cache
+E:\curso 2\desarrollo de interfaces\Hamburgueseria\Hamburgueseria\MyBrgLib_1\obj\Debug\MyBrgLib_1.dll
+E:\curso 2\desarrollo de interfaces\Hamburgueseria\Hamburgueseria\MyBrgLib_1\obj\Debug\MyBrgLib_1.pdb

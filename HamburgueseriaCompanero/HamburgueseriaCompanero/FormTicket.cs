@@ -13,27 +13,22 @@ namespace HamburgueseriaCompanero
 {
     public partial class FormTicket : Form
     {
+        GestorInterfaz gestor = new GestorInterfaz();
         public FormTicket()
         {
-
             InitializeComponent();
         }
 
         private void FormTicket_Load(object sender, EventArgs e)
         {
             // Crear una lista de objetos (pueden ser tus datos reales)
-            List<Hamburguesa> listaHamburguesas = new List<Hamburguesa>
-            {
-                new Hamburguesa(1, 1),
-                new Hamburguesa(1, 2),
-                new Hamburguesa(1, 3)
-            };
+            List<Producto> listaPedido = gestor.getTicket();
 
             // Llamar al método para agregar datos al DataGridView
-            AgregarDatosAlDataGridView(listaHamburguesas);
+            AgregarDatosAlDataGridView(listaPedido);
         }
 
-        private void AgregarDatosAlDataGridView(List<Hamburguesa> listaHamburguesas)
+        private void AgregarDatosAlDataGridView(List<Producto> listaHamburguesas)
         {
             // Limpiar el DataGridView antes de agregar nuevos datos
             dataGridViewTicket.Rows.Clear();

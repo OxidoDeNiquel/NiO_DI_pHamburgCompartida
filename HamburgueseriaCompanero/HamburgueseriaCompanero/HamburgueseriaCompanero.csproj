@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <Reference Include="MyBrgLib_1">
-      <HintPath>..\..\..\evaluacionSanti\Santiago SAENZ DE SANTA MARIA FERNANDEZ DEL CAMPO_90593_assignsubmission_file\Hamburgueseria_Santiago_Saenz_Santa_Maria_01\Hamburgueseria\MyBrgLib_1\bin\Debug\MyBrgLib_1.dll</HintPath>
+      <HintPath>..\..\MyBrgLib_1\bin\Debug\MyBrgLib_1.dll</HintPath>
     </Reference>
   </ItemGroup>
 

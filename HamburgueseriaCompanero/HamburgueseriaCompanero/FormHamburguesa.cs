@@ -121,7 +121,7 @@ namespace HamburgueseriaCompanero
             {
                 case DialogResult.OK:
                     Console.WriteLine("El usuario ha seleccionado 'OK'.");
-                    gestor.createHamburguer("Cangre-Melt Exposiva", 5.0);
+                    gestor.createHamburguer("Delicia Arenosa", 5.0);
                     break;
 
                 case DialogResult.Cancel:

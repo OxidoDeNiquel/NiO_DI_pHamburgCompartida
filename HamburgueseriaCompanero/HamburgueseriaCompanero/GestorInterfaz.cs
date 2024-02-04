@@ -7,11 +7,11 @@ using MyBrgLib_1;
 
 namespace HamburgueseriaCompanero
 {
-    internal class GestorInterfaz
+    public class GestorInterfaz
     {
         private List<Producto> datosTicket = new List<Producto>();
 
-        public void addTicket(Producto producto)
+        private void addTicket(Producto producto)
         {
             datosTicket.Add(producto);
         }
@@ -29,17 +29,17 @@ namespace HamburgueseriaCompanero
             addTicket(hamburguesa);
         }
 
-        public void createChips(string name, int size, double precio)
+        public void createChips(string name,double precio)
         {
-            Patatas patatas = new Patatas(2, size);
+            Patatas patatas = new Patatas(2, 1);
             patatas.setNombre(name);
             patatas.setPrecio(precio) ;
             addTicket(patatas);
         }
 
-        public void createDrinks(string name, int size, double precio)
+        public void createDrinks(string name, double precio)
         {
-            Bebida bebida = new Bebida(3, size, name);
+            Bebida bebida = new Bebida(3, 1, name);
             bebida.setNombre(name);
             bebida.setPrecio(precio);
             addTicket(bebida);

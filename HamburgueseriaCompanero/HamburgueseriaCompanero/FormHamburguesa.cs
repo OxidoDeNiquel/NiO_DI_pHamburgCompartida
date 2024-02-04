@@ -15,9 +15,9 @@ namespace HamburgueseriaCompanero
     public partial class FormHamburguesa : Form
     {
         GestorInterfaz gestor;
-        public FormHamburguesa()
+        public FormHamburguesa(GestorInterfaz gestor)
         {
-            gestor = new GestorInterfaz();
+            this.gestor = gestor;
             InitializeComponent();
         }
 
@@ -28,7 +28,7 @@ namespace HamburgueseriaCompanero
 
         private void volverAtras()
         {
-            FormPagPrincipal form2 = new FormPagPrincipal();
+            FormPagPrincipal form2 = new FormPagPrincipal(gestor);
             form2.Show();
 
             this.Visible = false;
@@ -51,6 +51,13 @@ namespace HamburgueseriaCompanero
                 case DialogResult.OK:
                     Console.WriteLine("El usuario ha seleccionado 'OK'.");
                     gestor.createHamburguer("Cangreburguer", 5.0);
+                    MessageBox.Show(
+                        "Tu hamburguesa ha sido añadida con éxito.",
+                        "¡Cangreburguer añadida!",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+                    volverAtras();
                     break;
 
                 case DialogResult.Cancel:
@@ -87,6 +94,13 @@ namespace HamburgueseriaCompanero
                 case DialogResult.OK:
                     Console.WriteLine("El usuario ha seleccionado 'OK'.");
                     gestor.createHamburguer("Cangre-Melt Exposiva", 5.0);
+                    MessageBox.Show(
+                        "Tu hamburguesa ha sido añadida con éxito.",
+                        "¡Cangre-Melt Exposiva añadida!",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+                    volverAtras();
                     break;
 
                 case DialogResult.Cancel:
@@ -122,6 +136,13 @@ namespace HamburgueseriaCompanero
                 case DialogResult.OK:
                     Console.WriteLine("El usuario ha seleccionado 'OK'.");
                     gestor.createHamburguer("Delicia Arenosa", 5.0);
+                    MessageBox.Show(
+                        "Tu hamburguesa ha sido añadida con éxito.",
+                        "¡Delicia Arenosa añadida!",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+                    volverAtras();
                     break;
 
                 case DialogResult.Cancel:
@@ -138,6 +159,20 @@ namespace HamburgueseriaCompanero
                 MessageBoxIcon.Information
             );
 
+        }
+
+        private void verCesta()
+        {
+            FormTicket formTicket = new FormTicket(gestor);
+            formTicket.Show();
+
+            this.Visible = false;
+        }
+
+
+        private void botonCesta_Click(object sender, EventArgs e)
+        {
+            verCesta();
         }
     }
 }

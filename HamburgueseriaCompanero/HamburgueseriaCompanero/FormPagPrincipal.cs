@@ -12,16 +12,17 @@ namespace HamburgueseriaCompanero
 {
     public partial class FormPagPrincipal : Form
     {
-        public FormPagPrincipal()
+        GestorInterfaz gestor;
+        public FormPagPrincipal(GestorInterfaz gestor)
         {
-
+            this.gestor = gestor;
             InitializeComponent();
 
         }
 
         private void botonCesta_Click(object sender, EventArgs e)
         {
-            FormTicket FormTicket = new FormTicket();
+            FormTicket FormTicket = new FormTicket(gestor);
             FormTicket.Show();
 
             this.Visible = false;
@@ -37,7 +38,7 @@ namespace HamburgueseriaCompanero
 
         private void button_burguer_Click(object sender, EventArgs e)
         {
-            FormHamburguesa formHamburguesa = new FormHamburguesa();
+            FormHamburguesa formHamburguesa = new FormHamburguesa(gestor);
             formHamburguesa.Show();
 
             this.Visible = false;
@@ -45,7 +46,7 @@ namespace HamburgueseriaCompanero
 
         private void button_bebida_Click(object sender, EventArgs e)
         {
-            FormBebida formBebida = new FormBebida();
+            FormBebida formBebida = new FormBebida(gestor);
             formBebida.Show();
 
             this.Visible = false;
@@ -53,7 +54,7 @@ namespace HamburgueseriaCompanero
 
         private void button_patatas_Click(object sender, EventArgs e)
         {
-            FormPatatas formPatatas = new FormPatatas();
+            FormPatatas formPatatas = new FormPatatas(gestor);
             formPatatas.Show();
 
             this.Visible = false;

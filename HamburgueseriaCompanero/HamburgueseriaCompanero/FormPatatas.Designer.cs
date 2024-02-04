@@ -131,6 +131,7 @@
             botonCesta.SizeMode = PictureBoxSizeMode.StretchImage;
             botonCesta.TabIndex = 10;
             botonCesta.TabStop = false;
+            botonCesta.Click += botonCesta_Click;
             // 
             // pictureBox_atras
             // 

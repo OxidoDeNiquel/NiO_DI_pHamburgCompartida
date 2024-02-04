@@ -12,14 +12,16 @@ namespace HamburgueseriaCompanero
 {
     public partial class FormBebida : Form
     {
-        public FormBebida()
+        GestorInterfaz gestor;
+        public FormBebida(GestorInterfaz gestor)
         {
+            this.gestor = gestor;
             InitializeComponent();
         }
 
         private void volverAtras()
         {
-            FormPagPrincipal form2 = new FormPagPrincipal();
+            FormPagPrincipal form2 = new FormPagPrincipal(gestor);
             form2.Show();
 
             this.Visible = false;
@@ -53,6 +55,14 @@ namespace HamburgueseriaCompanero
             {
                 case DialogResult.OK:
                     Console.WriteLine("El usuario ha seleccionado 'OK'.");
+                    gestor.createDrinks("Agua", 2);
+                    MessageBox.Show(
+                        "Tu agua ha sido añadida con éxito.",
+                        "¡Agua añadida!",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+                    volverAtras();
                     break;
 
                 case DialogResult.Cancel:
@@ -180,6 +190,19 @@ namespace HamburgueseriaCompanero
         private void pictureBox_atras_Click(object sender, EventArgs e)
         {
             volverAtras();
+        }
+
+        private void verCesta()
+        {
+            FormTicket formTicket = new FormTicket(gestor);
+            formTicket.Show();
+
+            this.Visible = false;
+        }
+
+        private void botonCesta_Click(object sender, EventArgs e)
+        {
+            verCesta();
         }
     }
 }

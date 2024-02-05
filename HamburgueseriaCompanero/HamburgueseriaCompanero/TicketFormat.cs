@@ -11,18 +11,34 @@ namespace HamburgueseriaCompanero
 
     public class Ticket
     {
-        public List<Producto> Productos { get; set; }
+        public List<PedidoTicket> Pedidos { get; set; }
 
         public Ticket()
         {
-            Productos = new List<Producto>();
+            Pedidos = new List<PedidoTicket>();
         }
     }
 
-    public class Producto
+    public class PedidoTicket
     {
-        public string Tipo { get; set; }
-        // Otros atributos del producto si es necesario
+        public List<ProductoTicket> Pedido {  get; set; }
+
+        public PedidoTicket()
+        {
+            Pedido = new List<ProductoTicket>();
+        }
+    }
+
+    public class ProductoTicket
+    {
+        public string Nombre { get; set; }
+        public double Precio { get; set; }  
+
+        public ProductoTicket(Producto producto)
+        {
+            this.Nombre = producto.getNombre();
+            this.Precio = producto.getPrecio();
+        }
     }
 
 }

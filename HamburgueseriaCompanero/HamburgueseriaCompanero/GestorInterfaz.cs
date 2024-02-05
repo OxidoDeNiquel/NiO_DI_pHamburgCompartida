@@ -56,16 +56,30 @@ namespace HamburgueseriaCompanero
             // Crear una instancia de la clase Ticket
             Ticket ticket = new Ticket();
 
-            // Agregar productos al ticket desde tu lista datosTicket
-            foreach (Producto producto in datosTicket)
+            // Iterar sobre los productos en datosTicket y agregarlos al ticket
+            foreach (MyBrgLib_1.Producto producto in datosTicket)
             {
-                ticket.Productos.Add(producto);
+                // Crear una instancia de ProductoTicket para cada producto
+                ProductoTicket productoTicket = new ProductoTicket(producto);
+
+                // Obtener el último pedido en el ticket o crear uno nuevo si no hay pedidos
+                PedidoTicket ultimoPedido = ticket.Pedidos.Count > 0 ? ticket.Pedidos[ticket.Pedidos.Count - 1] : null;
+
+                // Si no hay pedidos o el último pedido está completo, agregar un nuevo pedido al ticket
+                if (ultimoPedido == null || ultimoPedido.Pedido.Count >= 10)
+                {
+                    ultimoPedido = new PedidoTicket();
+                    ticket.Pedidos.Add(ultimoPedido);
+                }
+
+                // Agregar el producto al pedido actual
+                ultimoPedido.Pedido.Add(productoTicket);
             }
 
             // Serializar a JSON
             string jsonTicket = JsonSerializer.Serialize(ticket);
 
-            // Guardar el JSON en un archivo (ajusta la ruta y nombre del archivo según tu necesidad)
+            // Guardar el JSON en un archivo
             string filePath = "./ticket.json";
             File.WriteAllText(filePath, jsonTicket);
 

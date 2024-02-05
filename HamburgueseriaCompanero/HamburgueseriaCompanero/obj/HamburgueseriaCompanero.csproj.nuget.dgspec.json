@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Niio\\Documents\\GitHub\\NiO_DI_pHamburgCompartida\\HamburgueseriaCompanero\\HamburgueseriaCompanero\\HamburgueseriaCompanero.csproj": {}
+    "C:\\Users\\Alumno\\Documents\\GitHub\\NiO_DI_pHamburgCompartida\\HamburgueseriaCompanero\\HamburgueseriaCompanero\\HamburgueseriaCompanero.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Niio\\Documents\\GitHub\\NiO_DI_pHamburgCompartida\\HamburgueseriaCompanero\\HamburgueseriaCompanero\\HamburgueseriaCompanero.csproj": {
+    "C:\\Users\\Alumno\\Documents\\GitHub\\NiO_DI_pHamburgCompartida\\HamburgueseriaCompanero\\HamburgueseriaCompanero\\HamburgueseriaCompanero.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Niio\\Documents\\GitHub\\NiO_DI_pHamburgCompartida\\HamburgueseriaCompanero\\HamburgueseriaCompanero\\HamburgueseriaCompanero.csproj",
+        "projectUniqueName": "C:\\Users\\Alumno\\Documents\\GitHub\\NiO_DI_pHamburgCompartida\\HamburgueseriaCompanero\\HamburgueseriaCompanero\\HamburgueseriaCompanero.csproj",
         "projectName": "HamburgueseriaCompanero",
-        "projectPath": "C:\\Users\\Niio\\Documents\\GitHub\\NiO_DI_pHamburgCompartida\\HamburgueseriaCompanero\\HamburgueseriaCompanero\\HamburgueseriaCompanero.csproj",
-        "packagesPath": "C:\\Users\\Niio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Niio\\Documents\\GitHub\\NiO_DI_pHamburgCompartida\\HamburgueseriaCompanero\\HamburgueseriaCompanero\\obj\\",
+        "projectPath": "C:\\Users\\Alumno\\Documents\\GitHub\\NiO_DI_pHamburgCompartida\\HamburgueseriaCompanero\\HamburgueseriaCompanero\\HamburgueseriaCompanero.csproj",
+        "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alumno\\Documents\\GitHub\\NiO_DI_pHamburgCompartida\\HamburgueseriaCompanero\\HamburgueseriaCompanero\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Niio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -62,7 +62,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

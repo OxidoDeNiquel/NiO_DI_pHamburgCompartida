@@ -1,9 +1,10 @@
-﻿using System;
+﻿using MyBrgLib_1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
-using MyBrgLib_1;
 
 namespace HamburgueseriaCompanero
 {
@@ -48,6 +49,28 @@ namespace HamburgueseriaCompanero
         public List<Producto> getTicket()
         {
             return datosTicket;
+        }
+
+        public void generateTicket()
+        {
+            // Crear una instancia de la clase Ticket
+            Ticket ticket = new Ticket();
+
+            // Agregar productos al ticket desde tu lista datosTicket
+            foreach (Producto producto in datosTicket)
+            {
+                ticket.Productos.Add(producto);
+            }
+
+            // Serializar a JSON
+            string jsonTicket = JsonSerializer.Serialize(ticket);
+
+            // Guardar el JSON en un archivo (ajusta la ruta y nombre del archivo según tu necesidad)
+            string filePath = "./ticket.json";
+            File.WriteAllText(filePath, jsonTicket);
+
+            // Puedes mostrar un mensaje al usuario o realizar otras acciones necesarias
+            Console.WriteLine("Ticket guardado correctamente en " + filePath);
         }
     }
 }

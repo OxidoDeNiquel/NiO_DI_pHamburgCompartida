@@ -76,5 +76,14 @@ namespace HamburgueseriaCompanero
         {
             volverAtras();
         }
+
+        private void button_pagar_Click(object sender, EventArgs e)
+        {
+            gestor.generateTicket();
+            FormFormaDePago form = new FormFormaDePago();
+            form.Show();
+
+            this.Visible = false;
+        }
     }
 }

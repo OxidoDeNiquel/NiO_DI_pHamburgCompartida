@@ -119,6 +119,7 @@
             button_pagar.TabIndex = 21;
             button_pagar.Text = "PAGAR";
             button_pagar.UseVisualStyleBackColor = true;
+            button_pagar.Click += button_pagar_Click;
             // 
             // button_borrar
             // 

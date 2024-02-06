@@ -54,7 +54,7 @@ namespace HamburgueseriaCompanero
         public void generateTicket()
         {
             // Crear una instancia de la clase Ticket
-            Ticket ticket = new Ticket();
+            TicketFormat ticket = new TicketFormat();
 
             // Iterar sobre los productos en datosTicket y agregarlos al ticket
             foreach (MyBrgLib_1.Producto producto in datosTicket)

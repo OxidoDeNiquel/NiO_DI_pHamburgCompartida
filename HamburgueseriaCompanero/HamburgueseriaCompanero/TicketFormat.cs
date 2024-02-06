@@ -9,11 +9,11 @@ namespace HamburgueseriaCompanero
     using MyBrgLib_1;
     using System.Collections.Generic;
 
-    public class Ticket
+    public class TicketFormat
     {
         public List<PedidoTicket> Pedidos { get; set; }
 
-        public Ticket()
+        public TicketFormat()
         {
             Pedidos = new List<PedidoTicket>();
         }

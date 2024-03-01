@@ -16,5 +16,17 @@ namespace HamburgueseriaCompanero
         {
             InitializeComponent();
         }
+
+        private void button_efectivo_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Tu pedido ha sido realizado con éxito");
+            Application.Exit();
+        }
+
+        private void button_tarjeta_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Tu pedido ha sido realizado con éxito");
+            Application.Exit();
+        }
     }
 }

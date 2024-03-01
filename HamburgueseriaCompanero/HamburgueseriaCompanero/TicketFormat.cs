@@ -32,7 +32,11 @@ namespace HamburgueseriaCompanero
     public class ProductoTicket
     {
         public string Nombre { get; set; }
-        public double Precio { get; set; }  
+        public double Precio { get; set; }
+
+        public ProductoTicket()
+        {
+        }
 
         public ProductoTicket(Producto producto)
         {

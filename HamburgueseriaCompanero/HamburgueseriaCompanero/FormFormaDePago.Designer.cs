@@ -104,6 +104,7 @@
             button_efectivo.TabIndex = 11;
             button_efectivo.Text = "EFECTIVO";
             button_efectivo.UseVisualStyleBackColor = true;
+            button_efectivo.Click += button_efectivo_Click;
             // 
             // button_tarjeta
             // 
@@ -113,6 +114,7 @@
             button_tarjeta.TabIndex = 12;
             button_tarjeta.Text = "TARJETA";
             button_tarjeta.UseVisualStyleBackColor = true;
+            button_tarjeta.Click += button_tarjeta_Click;
             // 
             // button_cancelar
             // 

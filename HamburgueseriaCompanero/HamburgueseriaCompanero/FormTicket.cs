@@ -85,5 +85,36 @@ namespace HamburgueseriaCompanero
 
             this.Visible = false;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            gestor.generateTicket();
+            MessageBox.Show("El pedido ha sido guardado con éxito");
+
+        }
+
+        // Función para mostrar los datos en un DataGridView
+        public void DisplayDataInDataGridView(TicketFormat ticket)
+        {
+            // Supongamos que tienes un DataGridView llamado dgvOrder en tu formulario
+
+            // Limpiar cualquier dato existente en el DataGridView
+            dataGridViewTicket.Rows.Clear();
+
+            // Iterar sobre los pedidos y productos para agregarlos al DataGridView
+            foreach (PedidoTicket pedido in ticket.Pedidos)
+            {
+                foreach (ProductoTicket producto in pedido.Pedido)
+                {
+                    // Añadir una nueva fila al DataGridView con los datos del producto
+                    dataGridViewTicket.Rows.Add(producto.Nombre, producto.Precio);
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DisplayDataInDataGridView(gestor.LoadOrder());
+        }
     }
 }

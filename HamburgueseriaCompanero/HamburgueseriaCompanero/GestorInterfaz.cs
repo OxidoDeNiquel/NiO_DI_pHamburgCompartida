@@ -86,5 +86,34 @@ namespace HamburgueseriaCompanero
             // Puedes mostrar un mensaje al usuario o realizar otras acciones necesarias
             Console.WriteLine("Ticket guardado correctamente en " + filePath);
         }
+
+
+        public TicketFormat LoadOrder()
+        {
+            string filePath = "./ticket.json";
+
+            // Verificar si el archivo existe antes de intentar cargarlo
+            if (File.Exists(filePath))
+            {
+                // Leer el contenido del archivo JSON
+                string jsonTicket = File.ReadAllText(filePath);
+
+                // Deserializar el JSON a una instancia de TicketFormat
+                TicketFormat loadedTicket = JsonSerializer.Deserialize<TicketFormat>(jsonTicket);
+
+                // Puedes mostrar un mensaje al usuario o realizar otras acciones necesarias
+                Console.WriteLine("Ticket cargado correctamente desde " + filePath);
+
+                // Devolver la instancia deserializada
+                return loadedTicket;
+            }
+            else
+            {
+                // Si el archivo no existe, puedes manejarlo de alguna manera (por ejemplo, mostrar un mensaje al usuario)
+                Console.WriteLine("El archivo " + filePath + " no existe.");
+                return null;
+            }
+        }
+
     }
 }

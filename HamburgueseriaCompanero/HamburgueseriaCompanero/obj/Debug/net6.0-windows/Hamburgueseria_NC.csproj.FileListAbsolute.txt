@@ -1,0 +1,16 @@
+C:\Users\Niio\Documents\GitHub\NiO_DI_pHamburgCompartida\HamburgueseriaCompanero\HamburgueseriaCompanero\obj\Debug\net6.0-windows\Hamburgueseria_NC.csproj.AssemblyReference.cache
+C:\Users\Niio\Documents\GitHub\NiO_DI_pHamburgCompartida\HamburgueseriaCompanero\HamburgueseriaCompanero\obj\Debug\net6.0-windows\HamburgueseriaCompanero.FormBebida.resources
+C:\Users\Niio\Documents\GitHub\NiO_DI_pHamburgCompartida\HamburgueseriaCompanero\HamburgueseriaCompanero\obj\Debug\net6.0-windows\HamburgueseriaCompanero.FormBienvenida.resources
+C:\Users\Niio\Documents\GitHub\NiO_DI_pHamburgCompartida\HamburgueseriaCompanero\HamburgueseriaCompanero\obj\Debug\net6.0-windows\HamburgueseriaCompanero.FormFormaDePago.resources
+C:\Users\Niio\Documents\GitHub\NiO_DI_pHamburgCompartida\HamburgueseriaCompanero\HamburgueseriaCompanero\obj\Debug\net6.0-windows\HamburgueseriaCompanero.FormHamburguesa.resources
+C:\Users\Niio\Documents\GitHub\NiO_DI_pHamburgCompartida\HamburgueseriaCompanero\HamburgueseriaCompanero\obj\Debug\net6.0-windows\HamburgueseriaCompanero.FormPagPrincipal.resources
+C:\Users\Niio\Documents\GitHub\NiO_DI_pHamburgCompartida\HamburgueseriaCompanero\HamburgueseriaCompanero\obj\Debug\net6.0-windows\HamburgueseriaCompanero.FormPatatas.resources
+C:\Users\Niio\Documents\GitHub\NiO_DI_pHamburgCompartida\HamburgueseriaCompanero\HamburgueseriaCompanero\obj\Debug\net6.0-windows\HamburgueseriaCompanero.FormTicket.resources
+C:\Users\Niio\Documents\GitHub\NiO_DI_pHamburgCompartida\HamburgueseriaCompanero\HamburgueseriaCompanero\obj\Debug\net6.0-windows\Hamburgueseria_NC.Properties.Resources.resources
+C:\Users\Niio\Documents\GitHub\NiO_DI_pHamburgCompartida\HamburgueseriaCompanero\HamburgueseriaCompanero\obj\Debug\net6.0-windows\HamburgueseriaCompanero.TicketTool.resources
+C:\Users\Niio\Documents\GitHub\NiO_DI_pHamburgCompartida\HamburgueseriaCompanero\HamburgueseriaCompanero\obj\Debug\net6.0-windows\Hamburgueseria_NC.csproj.GenerateResource.cache
+C:\Users\Niio\Documents\GitHub\NiO_DI_pHamburgCompartida\HamburgueseriaCompanero\HamburgueseriaCompanero\obj\Debug\net6.0-windows\Hamburgueseria_NC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Niio\Documents\GitHub\NiO_DI_pHamburgCompartida\HamburgueseriaCompanero\HamburgueseriaCompanero\obj\Debug\net6.0-windows\Hamburgueseria_NC.AssemblyInfoInputs.cache
+C:\Users\Niio\Documents\GitHub\NiO_DI_pHamburgCompartida\HamburgueseriaCompanero\HamburgueseriaCompanero\obj\Debug\net6.0-windows\Hamburgueseria_NC.AssemblyInfo.cs
+C:\Users\Niio\Documents\GitHub\NiO_DI_pHamburgCompartida\HamburgueseriaCompanero\HamburgueseriaCompanero\obj\Debug\net6.0-windows\Hamburgueseria_NC.csproj.CoreCompileInputs.cache
+C:\Users\Niio\Documents\GitHub\NiO_DI_pHamburgCompartida\HamburgueseriaCompanero\HamburgueseriaCompanero\obj\Debug\net6.0-windows\Hamburgueseria_NC.sourcelink.json

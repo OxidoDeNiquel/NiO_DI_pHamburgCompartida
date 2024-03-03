@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("HamburgueseriaCompanero")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Hamburgueseria_NC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e17d17e01d83e7cecdabef0673d38e576d3b7755")]
-[assembly: System.Reflection.AssemblyProductAttribute("HamburgueseriaCompanero")]
-[assembly: System.Reflection.AssemblyTitleAttribute("HamburgueseriaCompanero")]
+[assembly: System.Reflection.AssemblyProductAttribute("Hamburgueseria_NC")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Hamburgueseria_NC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox_bebida.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBox_patatasGajo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/4QCqRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAZKG
         AAcAAAB0AAAALAAAAABDAFIARQBBAFQATwBSADoAIABnAGQALQBqAHAAZQBnACAAdgAxAC4AMAAgACgA
@@ -1026,10 +1026,10 @@
         4MhBBH+JQOp1gIgIECAj9EMAggiGACP8YgdTqdTgiECPoYiQOv8Ajx1Op1Op1/8Asof/2Q==
 </value>
   </data>
-  <data name="pictureBox_burguercangreburguer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBox_patatasFritas.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA5gAAAKHCAIAAABrXXAQAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAA/7JJREFUeF7s/fd7HMeaoAvu/7DP7rO/3H3m3r135+5OzzMz2z2uTx95iZJoJZEU
+        vQAADr0BR/uQrQAA/7JJREFUeF7s/fd7HMeaoAvu/7DP7rO/3H3m3r135+5OzzMz2z2uTx95iZJoJZEU
         JUr03ntvQW9hCIAedCABEt6jvPco77333vuq/bISwsExraYkUCB44lUykZUZGVkZX4bizag0/5cqAoFA
         IBAIBAIxB0Eii0AgEAgEAoGYkyCRRSAQCAQCgUDMSZDIIhAIBAKBQCDmJEhkEQgEAoFAIBBzEiSyCAQC
         gUAgEIg5CRJZBAKBQCAQCMScBIksAoFAIBAIBGJOgkQWgUAgEAgEAjEnQSKLQCAQCAQCgZiTIJFFIBAI

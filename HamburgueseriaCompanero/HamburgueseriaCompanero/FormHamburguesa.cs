@@ -57,11 +57,9 @@ namespace HamburgueseriaCompanero
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information
                     );
-                    volverAtras();
                     break;
 
                 case DialogResult.Cancel:
-                    volverAtras();
                     break;
             }
 
@@ -173,6 +171,21 @@ namespace HamburgueseriaCompanero
         private void botonCesta_Click(object sender, EventArgs e)
         {
             verCesta();
+        }
+
+        private void button_info_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Selecciona los botones para elegir el artículo que deseas incluir en tu pedido.\r\n",
+                "Info adicional de las hamburguesas",
+                    MessageBoxButtons.OKCancel,
+                    MessageBoxIcon.Information);
+        }
+
+        private void pictureBox_cesta_Click(object sender, EventArgs e)
+        {
+            FormTicket formTicket = new FormTicket(gestor);
+            formTicket.Show();
+            this.Visible = false;
         }
     }
 }

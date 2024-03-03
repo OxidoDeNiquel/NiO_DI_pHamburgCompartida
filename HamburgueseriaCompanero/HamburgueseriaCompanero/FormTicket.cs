@@ -22,6 +22,7 @@ namespace HamburgueseriaCompanero
         }
         private void volverAtras()
         {
+            gestor.setTicket(dataGridViewTicket);
             FormPagPrincipal form2 = new FormPagPrincipal(gestor);
             form2.Show();
 
@@ -30,22 +31,17 @@ namespace HamburgueseriaCompanero
 
         private void FormTicket_Load(object sender, EventArgs e)
         {
-            // Crear una lista de objetos (pueden ser tus datos reales)
             List<Producto> listaPedido = gestor.getTicket();
 
-            // Llamar al método para agregar datos al DataGridView
             AgregarDatosAlDataGridView(listaPedido);
         }
 
         private void AgregarDatosAlDataGridView(List<Producto> listaProductos)
         {
-            // Limpiar el DataGridView antes de agregar nuevos datos
             dataGridViewTicket.Rows.Clear();
 
-            // Iterar a través de la lista y agregar cada objeto como una nueva fila
             foreach (Producto producto in listaProductos)
             {
-                // Agregar una nueva fila al DataGridView
                 dataGridViewTicket.Rows.Add(producto.getNombre(), producto.getPrecio());
             }
         }
@@ -54,13 +50,10 @@ namespace HamburgueseriaCompanero
         {
             if (dataGridViewTicket.SelectedRows.Count > 0)
             {
-                // Obtener el índice de la fila seleccionada
                 int indiceSeleccionado = dataGridViewTicket.SelectedRows[0].Index;
 
-                // Obtener el producto correspondiente a la fila seleccionada
                 Producto productoSeleccionado = gestor.getTicket()[indiceSeleccionado];
 
-                // Eliminar el producto de la lista en el GestorInterfaz
                 gestor.removeTicket(productoSeleccionado);
 
                 // Actualizar el DataGridView
@@ -88,7 +81,7 @@ namespace HamburgueseriaCompanero
 
         private void button1_Click(object sender, EventArgs e)
         {
-            gestor.generateTicket();
+            gestor.saveOrder();
             MessageBox.Show("El pedido ha sido guardado con éxito");
 
         }
@@ -96,17 +89,13 @@ namespace HamburgueseriaCompanero
         // Función para mostrar los datos en un DataGridView
         public void DisplayDataInDataGridView(TicketFormat ticket)
         {
-            // Supongamos que tienes un DataGridView llamado dgvOrder en tu formulario
 
-            // Limpiar cualquier dato existente en el DataGridView
             dataGridViewTicket.Rows.Clear();
 
-            // Iterar sobre los pedidos y productos para agregarlos al DataGridView
             foreach (PedidoTicket pedido in ticket.Pedidos)
             {
                 foreach (ProductoTicket producto in pedido.Pedido)
                 {
-                    // Añadir una nueva fila al DataGridView con los datos del producto
                     dataGridViewTicket.Rows.Add(producto.Nombre, producto.Precio);
                 }
             }

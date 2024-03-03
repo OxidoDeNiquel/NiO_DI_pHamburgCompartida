@@ -105,5 +105,11 @@ namespace HamburgueseriaCompanero
         {
             verCesta();
         }
+
+        private void button_info_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Selecciona los botones para elegir el artículo que deseas incluir en tu pedido.\r\n"
+                , "Info adicional de las bebidas", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+        }
     }
 }

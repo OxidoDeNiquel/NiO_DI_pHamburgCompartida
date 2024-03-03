@@ -38,8 +38,8 @@
             column_price = new DataGridViewTextBoxColumn();
             button_pagar = new Button();
             button_borrar = new Button();
-            button1 = new Button();
-            button2 = new Button();
+            button_guardar = new Button();
+            button_importar = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)button_info).BeginInit();
@@ -144,25 +144,25 @@
             button_borrar.UseVisualStyleBackColor = true;
             button_borrar.Click += button_borrar_Click;
             // 
-            // button1
+            // button_guardar
             // 
-            button1.Location = new Point(3, 176);
-            button1.Name = "button1";
-            button1.Size = new Size(144, 23);
-            button1.TabIndex = 23;
-            button1.Text = "Guardar pedido";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button_guardar.Location = new Point(3, 176);
+            button_guardar.Name = "button_guardar";
+            button_guardar.Size = new Size(144, 23);
+            button_guardar.TabIndex = 23;
+            button_guardar.Text = "Guardar pedido";
+            button_guardar.UseVisualStyleBackColor = true;
+            button_guardar.Click += button1_Click;
             // 
-            // button2
+            // button_importar
             // 
-            button2.Location = new Point(3, 214);
-            button2.Name = "button2";
-            button2.Size = new Size(144, 23);
-            button2.TabIndex = 24;
-            button2.Text = "Importar pedido";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            button_importar.Location = new Point(3, 214);
+            button_importar.Name = "button_importar";
+            button_importar.Size = new Size(144, 23);
+            button_importar.TabIndex = 24;
+            button_importar.Text = "Importar pedido";
+            button_importar.UseVisualStyleBackColor = true;
+            button_importar.Click += button2_Click;
             // 
             // tableLayoutPanel1
             // 
@@ -193,8 +193,8 @@
             tableLayoutPanel2.ColumnCount = 1;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel2.Controls.Add(button_borrar, 0, 1);
-            tableLayoutPanel2.Controls.Add(button1, 0, 2);
-            tableLayoutPanel2.Controls.Add(button2, 0, 3);
+            tableLayoutPanel2.Controls.Add(button_guardar, 0, 2);
+            tableLayoutPanel2.Controls.Add(button_importar, 0, 3);
             tableLayoutPanel2.Location = new Point(623, 115);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 5;
@@ -237,8 +237,8 @@
         private Button button_borrar;
         private DataGridViewTextBoxColumn column_name;
         private DataGridViewTextBoxColumn column_price;
-        private Button button1;
-        private Button button2;
+        private Button button_guardar;
+        private Button button_importar;
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel2;
     }

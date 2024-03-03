@@ -28,5 +28,11 @@ namespace HamburgueseriaCompanero
             MessageBox.Show("Tu pedido ha sido realizado con éxito");
             Application.Exit();
         }
+
+        private void button_cancelar_Click(object sender, EventArgs e)
+        {
+            FormBienvenida formBienvenida = new FormBienvenida();
+            formBienvenida.Show();
+        }
     }
 }

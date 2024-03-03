@@ -51,69 +51,138 @@ namespace HamburgueseriaCompanero
             return datosTicket;
         }
 
-        public void generateTicket()
+        //Funcion para meter los datos recien importados en la lista del ticket para que permanezca durante la ejecución.
+        public void setTicket(DataGridView dataGridView)
         {
-            // Crear una instancia de la clase Ticket
+            List<Producto> ticket = new List<Producto>();
+
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                if (!row.IsNewRow && row.Cells.Count >= 2)
+                {
+                    string nombre = row.Cells[0].Value?.ToString();
+                    double precio = 0;
+
+                    if (double.TryParse(row.Cells[1].Value?.ToString(), out precio))
+                    {
+                        Producto producto = new Producto(1, 1);
+                        producto.setNombre(nombre);
+                        producto.setPrecio(precio);
+                        ticket.Add(producto);
+                    }
+                }
+            }
+
+            this.datosTicket = ticket;
+        }
+
+
+        public void saveOrder()
+        {
             TicketFormat ticket = new TicketFormat();
 
-            // Iterar sobre los productos en datosTicket y agregarlos al ticket
             foreach (MyBrgLib_1.Producto producto in datosTicket)
             {
-                // Crear una instancia de ProductoTicket para cada producto
                 ProductoTicket productoTicket = new ProductoTicket(producto);
 
-                // Obtener el último pedido en el ticket o crear uno nuevo si no hay pedidos
                 PedidoTicket ultimoPedido = ticket.Pedidos.Count > 0 ? ticket.Pedidos[ticket.Pedidos.Count - 1] : null;
 
-                // Si no hay pedidos o el último pedido está completo, agregar un nuevo pedido al ticket
                 if (ultimoPedido == null || ultimoPedido.Pedido.Count >= 10)
                 {
                     ultimoPedido = new PedidoTicket();
                     ticket.Pedidos.Add(ultimoPedido);
                 }
 
-                // Agregar el producto al pedido actual
                 ultimoPedido.Pedido.Add(productoTicket);
             }
 
-            // Serializar a JSON
             string jsonTicket = JsonSerializer.Serialize(ticket);
 
-            // Guardar el JSON en un archivo
-            string filePath = "./ticket.json";
+            string filePath = "./order.json";
             File.WriteAllText(filePath, jsonTicket);
 
-            // Puedes mostrar un mensaje al usuario o realizar otras acciones necesarias
             Console.WriteLine("Ticket guardado correctamente en " + filePath);
         }
 
 
         public TicketFormat LoadOrder()
         {
-            string filePath = "./ticket.json";
+            string filePath = "./order.json";
 
-            // Verificar si el archivo existe antes de intentar cargarlo
             if (File.Exists(filePath))
             {
-                // Leer el contenido del archivo JSON
                 string jsonTicket = File.ReadAllText(filePath);
 
-                // Deserializar el JSON a una instancia de TicketFormat
                 TicketFormat loadedTicket = JsonSerializer.Deserialize<TicketFormat>(jsonTicket);
 
-                // Puedes mostrar un mensaje al usuario o realizar otras acciones necesarias
                 Console.WriteLine("Ticket cargado correctamente desde " + filePath);
 
-                // Devolver la instancia deserializada
                 return loadedTicket;
             }
             else
             {
-                // Si el archivo no existe, puedes manejarlo de alguna manera (por ejemplo, mostrar un mensaje al usuario)
                 Console.WriteLine("El archivo " + filePath + " no existe.");
                 return null;
             }
         }
+
+        public void generateTicket()
+        {
+            TicketFormat ticket = new TicketFormat();
+
+            foreach (MyBrgLib_1.Producto producto in datosTicket)
+            {
+                ProductoTicket productoTicket = new ProductoTicket(producto);
+
+                PedidoTicket ultimoPedido = ticket.Pedidos.Count > 0 ? ticket.Pedidos[ticket.Pedidos.Count - 1] : null;
+
+                if (ultimoPedido == null || ultimoPedido.Pedido.Count >= 10)
+                {
+                    ultimoPedido = new PedidoTicket();
+                    ticket.Pedidos.Add(ultimoPedido);
+                }
+
+                ultimoPedido.Pedido.Add(productoTicket);
+            }
+
+            string ticketText = GenerateTicketText(ticket);
+            // Dirección de guardado --> ".\bin\Debug\net6.0-windows\ticket.txt"
+            string filePath = "./ticket.txt";
+            File.WriteAllText(filePath, ticketText);
+
+            Console.WriteLine("Ticket guardado correctamente en " + filePath);
+        }
+
+        // Función para generar la representación gráfica del ticket en formato de texto
+        private string GenerateTicketText(TicketFormat ticket)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine("------------------------------");
+            sb.AppendLine("        TICKET DE COMPRA       ");
+            sb.AppendLine("------------------------------");
+
+            foreach (PedidoTicket pedido in ticket.Pedidos)
+            {
+                sb.AppendLine("Pedido:");
+
+                foreach (ProductoTicket productoTicket in pedido.Pedido)
+                {
+                    sb.AppendLine($"  - {productoTicket.Nombre} - {productoTicket.Precio}");
+                }
+
+                sb.AppendLine(); 
+            }
+
+            double total = ticket.Pedidos.Sum(pedido => pedido.Pedido.Sum(producto => producto.Precio));
+
+            sb.AppendLine($"TOTAL: {total:C}");
+
+            sb.AppendLine("------------------------------");
+
+            return sb.ToString();
+        }
+
 
     }
 }

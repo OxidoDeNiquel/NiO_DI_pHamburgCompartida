@@ -85,30 +85,13 @@ namespace HamburgueseriaCompanero
             switch (resultadoCocacola)
             {
                 case DialogResult.OK:
-                    Console.WriteLine("El usuario ha seleccionado 'OK'.");
-                    break;
-
-                case DialogResult.Cancel:
-                    volverAtras();
-                    break;
-            }
-        }
-
-        private void button_cocacola0_Click(object sender, EventArgs e)
-        {
-            DialogResult resultadoCocacola0 = MessageBox.Show(
-                "¿Quieres añadir una botella de CoKCola0 a tu pedido?\n" +
-                "\nPrecio: 2,5€",
-                "¡Añade CoKCola0 a tu pedido!",
-                MessageBoxButtons.OKCancel,
-                MessageBoxIcon.Question
-            );
-
-            // Verificar la respuesta del usuario
-            switch (resultadoCocacola0)
-            {
-                case DialogResult.OK:
-                    Console.WriteLine("El usuario ha seleccionado 'OK'.");
+                    gestor.createDrinks("CoKCola", 2.5);
+                    MessageBox.Show(
+                        "Tu CoKCola ha sido añadida con éxito.",
+                        "¡CoKCola añadida!",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
                     break;
 
                 case DialogResult.Cancel:
@@ -131,30 +114,13 @@ namespace HamburgueseriaCompanero
             switch (resultadoCerveza)
             {
                 case DialogResult.OK:
-                    Console.WriteLine("El usuario ha seleccionado 'OK'.");
-                    break;
-
-                case DialogResult.Cancel:
-                    volverAtras();
-                    break;
-            }
-        }
-
-        private void button_nestea_Click(object sender, EventArgs e)
-        {
-            DialogResult resultadoNesty = MessageBox.Show(
-                "¿Quieres añadir un Nesty a tu pedido?\n" +
-                "\nPrecio: 2€",
-                "¡Añade Nesty a tu pedido!",
-                MessageBoxButtons.OKCancel,
-                MessageBoxIcon.Question
-            );
-
-            // Verificar la respuesta del usuario
-            switch (resultadoNesty)
-            {
-                case DialogResult.OK:
-                    Console.WriteLine("El usuario ha seleccionado 'OK'.");
+                    gestor.createDrinks("Cerveza", 2.5);
+                    MessageBox.Show(
+                        "Tu cerveza ha sido añadida con éxito.",
+                        "¡Cerveza añadida!",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
                     break;
 
                 case DialogResult.Cancel:
@@ -166,10 +132,10 @@ namespace HamburgueseriaCompanero
         private void button_limonada_Click(object sender, EventArgs e)
         {
             DialogResult resultadoLimonada = MessageBox.Show(
-                "¿Quieres añadir una limonada a tu pedido?\n" +
+                "¿Quieres añadir una LimoNada a tu pedido?\n" +
                 "\nPrecio: 3€" +
                 "\n(Es natural)",
-                "¡Añade limonada a tu pedido!",
+                "¡Añade LimoNada a tu pedido!",
                 MessageBoxButtons.OKCancel,
                 MessageBoxIcon.Question
             );
@@ -178,7 +144,13 @@ namespace HamburgueseriaCompanero
             switch (resultadoLimonada)
             {
                 case DialogResult.OK:
-                    Console.WriteLine("El usuario ha seleccionado 'OK'.");
+                    gestor.createDrinks("LimoNada", 3);
+                    MessageBox.Show(
+                        "Tu LimoNada ha sido añadida con éxito.",
+                        "¡LimoNada añadida!",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
                     break;
 
                 case DialogResult.Cancel:
